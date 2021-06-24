@@ -7,7 +7,7 @@ Original file is located at
     https://colab.research.google.com/drive/1ALHkiDt86c_rp5efhK4Nudns5Hc7bGcz
 """
 
-! pip install ax-platform
+#! pip install ax-platform
 
 #### Biasian Optimization of Deep Neural Hyper Parameters #####
 import matplotlib.pyplot as plt
