@@ -170,8 +170,9 @@ class ResBlock(nn.Module):
   def __init__(self, num_ft = 64, kernel_size = 3, stride = 1, padding = 1):
     super(ResBlock, self).__init__()
     m = []
-    for _ in range(2):
+    for i in range(2):
       m.append(nn.Conv1d(num_ft, num_ft, kernel_size, stride, padding))
+      #if i==0 :
       m.append(nn.BatchNorm1d(num_ft))
       m.append(nn.ReLU())
     self.body = nn.Sequential(*m)
@@ -189,7 +190,7 @@ class ResedualEEGClassifier_3(nn.Module):
   def __init__(self, num_channels,  num_classes, num_res_ft = 64, num_res = 2, input_size = 16,
                hidden_size = 128, sequence_length = 16, num_layers = 1):
     super(ResedualEEGClassifier_3, self).__init__()
-    self.conv = nn.Conv1d(num_channels, num_res_ft, kernel_size = 3, stride = 1, padding = 0)
+    self.conv = nn.Conv1d(num_channels, num_res_ft, kernel_size = 3, stride = 1, padding = 1)
     self.res = ResBlock()
     mat = []
     for _ in range(num_res):
@@ -197,43 +198,34 @@ class ResedualEEGClassifier_3(nn.Module):
       mat.append(nn.RReLU())
     self.res_body_1 = nn.Sequential(*mat) 
 
-    self.conv2 = nn.Conv1d(num_res_ft, num_res_ft*2, kernel_size = 3, stride = 1, padding = 0)
-
     mat2 = []
     for _ in range(num_res):
-      mat2.append(ResBlock(num_ft = num_res_ft*2))
+      mat2.append(ResBlock(num_ft = num_res_ft))
       mat2.append(nn.RReLU())
     self.res_body_2 = nn.Sequential(*mat2) 
-    self.conv3 = nn.Conv1d(num_res_ft*2, num_res_ft*4, kernel_size = 3, stride = 1, padding = 0)
 
     mat3 = []
     for _ in range(num_res):
-      mat3.append(ResBlock(num_ft = num_res_ft*4))
+      mat3.append(ResBlock(num_ft = num_res_ft))
       mat3.append(nn.RReLU())
     self.res_body_3 = nn.Sequential(*mat3) 
-    self.conv4 = nn.Conv1d(num_res_ft*4, num_res_ft*8, kernel_size = 3, stride = 1, padding = 0)
-
-    mat4 = []
-    for _ in range(num_res):
-      mat4.append(ResBlock(num_ft = num_res_ft*8))
-      mat4.append(nn.RReLU())
-    self.res_body_4 = nn.Sequential(*mat4) 
 
     self.avg = nn.AdaptiveAvgPool1d(1)
     self.maxpool = nn.MaxPool1d(1)
 
-    self.fc = nn.Linear(num_res_ft*4, num_classes)
+    self.fc = nn.Linear(num_res_ft, num_classes)
     self.clf = nn.Softmax()
 
   def forward(self, x):
-    x = self.conv(x)
-    x = self.res_body_1(x)
-    x = self.conv2(x)
+    x_in = self.conv(x)
+    x = self.res_body_1(x_in)
+    x = x + x_in
+    x1 = x
     x = self.res_body_2(x)
-    x = self.conv3(x)
+    x = x+x1
+    x2 = x
     x = self.res_body_3(x)
-    #x = self.conv4(x)
-    #x = self.res_body_4(x)
+    x = x + x2
     x = self.avg(x)
     x = torch.flatten(x)
     x = self.fc(x)
