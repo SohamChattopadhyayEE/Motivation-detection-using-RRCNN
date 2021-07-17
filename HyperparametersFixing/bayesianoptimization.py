@@ -172,9 +172,9 @@ class ResBlock(nn.Module):
     m = []
     for i in range(2):
       m.append(nn.Conv1d(num_ft, num_ft, kernel_size, stride, padding))
-      #if i==0 :
-      m.append(nn.BatchNorm1d(num_ft))
-      m.append(nn.ReLU())
+      if i==0 :
+          m.append(nn.BatchNorm1d(num_ft))
+          m.append(nn.ReLU())
     self.body = nn.Sequential(*m)
 
   def forward(self, x):
