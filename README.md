@@ -8,5 +8,5 @@ In the CodeOcean platform, the test data, trained weights and the complete test 
 ## Dependencies
 
 
-## DATA
+## Data
 The dataset will be published soon after some mandetory preprocessing of it.
