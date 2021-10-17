@@ -1,4 +1,4 @@
-# RRCNN
+# Motivation Detection using RRCNN Model
 This code refers to the paper entitled [Motivation detection using EEG signal analysis by residual-in-residual convolutional neural network](https://www.sciencedirect.com/science/article/pii/S0957417421009544 "link to the paper"), where the motivation level of different test subjects is detected by analyzing Electroencephalography Signals. Specifically, the proposed RRCNN model detects whether a person is enough motivated to play a reward-based game (designed in the NTU lab) or not. Here the proposed model is residual-in-residual 1D CNN or RRCNN, where dual residual operation is used for better feature learning from multi-channeled EEG data. 
 
 https://codeocean.com/capsule/0422935/tree
