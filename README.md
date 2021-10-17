@@ -5,5 +5,5 @@ https://codeocean.com/capsule/0422935/tree
 
 In the CodeOcean platform, the test data, trained weights and the complete test code is given. Just by clicking on the Reproducible Run button, the test results can be achieved. It is to be noted that, by performing several test runs, the most occuring best test accuracy obtained is 89%.  
 
-# DATA
+## DATA
 The dataset will be published soon after some mandetory preprocessing of it.
