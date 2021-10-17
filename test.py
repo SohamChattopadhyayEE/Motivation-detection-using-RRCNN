@@ -30,8 +30,7 @@ test_label_path = args.label_path
 
 test_data, test_label = test_dataset(test_data_path, test_label_path)
 
-num_epoch = 600
-lr = 0.0001
+
 num_channels = models_params.num_channels
 num_residual_features = models_params.num_residual_features
 num_resedual_blocks = models_params.num_resedual_blocks
