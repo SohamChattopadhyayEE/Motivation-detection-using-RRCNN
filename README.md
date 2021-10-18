@@ -11,22 +11,28 @@ This code refers to the paper entitled [Motivation detection using EEG signal an
 The test data and labels can be found [here](https://codeocean.com/capsule/0422935/tree). The entire dataset will be published soon after some mandetory preprocessing of it.
 
 ## Execution
-- ### Test : 
-  - #### Default directory : 
-         Current directory 
-                     |
-                     |
-                     |
-                     ---->data ----> Test data 
-                     |      |           |
-                     |      |           |
-                     |      |           ---> test_data.pkl
-                     |      |           |
-                     |      |           ---> test_label.pkl
-                     |      ----> Train data
-                     |
-                     ----> config ----> config.json
-                       
+- ### Default directory format : 
+      Current directory 
+             |
+             |
+             |
+             ---->data ----> Test data 
+             |      |           |
+             |      |           |
+             |      |           ---> test_data.pkl
+             |      |           |
+             |      |           ---> test_label.pkl
+             |      |
+             |      |
+             |       ----> Train data
+             |                  |
+             |                  |
+             |                  ---> train_data.pkl
+             |                  |
+             |                  ---> reain_label.pkl
+             |
+             ----> config ----> config.json
+- ### Test :                      
   - #### Code execution : 
          $python3 test.py -m RRCNN_C -n 2
   - Direct implementation of RRCNN_C on the test data is given in [Codeocean platform](https://codeocean.com/capsule/0422935/tree). 
