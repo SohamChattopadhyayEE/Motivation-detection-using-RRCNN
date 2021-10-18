@@ -29,7 +29,7 @@ The test data and labels can be found [here](https://codeocean.com/capsule/04229
              |                  |
              |                  ---> train_data.pkl
              |                  |
-             |                  ---> reain_label.pkl
+             |                  ---> train_label.pkl
              |
              ----> config ----> config.json
 - ### Train : 
