@@ -30,6 +30,7 @@ The test data and labels can be found [here](https://codeocean.com/capsule/04229
          $python3 test.py -m RRCNN_C -n 2
   - Direct implementation of RRCNN_C on the test data is given in [Codeocean platform](https://codeocean.com/capsule/0422935/tree). 
   - In the CodeOcean platform, the test data, trained weights and the complete test code is given. Just by clicking on the Reproducible Run button, the test results can be achieved. It is to be noted that, by performing several test runs, the most occuring best test accuracy obtained is 89%.  
+## The Game
 
 ## RRCNN
 RRCNN is an 1D residual-in-residual network consisted of multiple dual-residual blocks. The model can have various configurations, in this task 6 different configurations of RRCNN have been implemented. The detailed information about configurations of these different versions and respective performances in the proposed task is reported in the aforementioned [paper](https://www.sciencedirect.com/science/article/pii/S0957417421009544 "link to the paper"). The general architecture of the RRCNN model is shown in ![Fig. 1](https://github.com/SohamChattopadhyayEE/Motivation-detection-using-RRCNN/blob/main/Figures/Networks/ResidualArchitecture.jpg) where the **1D residual block** is given by ![Fig. 2](https://github.com/SohamChattopadhyayEE/Motivation-detection-using-RRCNN/blob/main/Figures/Networks/ResidualBlock.jpg)
