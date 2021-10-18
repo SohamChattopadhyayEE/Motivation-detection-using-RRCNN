@@ -16,6 +16,19 @@ The test data and labels can be found [here](https://codeocean.com/capsule/04229
 
 ## Execution
 - ### Test : 
-  - #### Dataset : 
+  - #### Default directory : 
+         Current directory 
+                     |
+                     |
+                     |
+                     ---->data ----> Test data 
+                     |                  |
+                     |                  |
+                     |                  ---> test_data.pkl
+                     |                  |
+                     |                  ---> test_label.pkl
+                     |
+                     ----> config ----> config.json
+                       
   - #### Code execution : 
          $python3 test.py -m RRCNN_C -n 2
