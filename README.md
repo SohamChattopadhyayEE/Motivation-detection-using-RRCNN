@@ -6,7 +6,10 @@ https://codeocean.com/capsule/0422935/tree
 In the CodeOcean platform, the test data, trained weights and the complete test code is given. Just by clicking on the Reproducible Run button, the test results can be achieved. It is to be noted that, by performing several test runs, the most occuring best test accuracy obtained is 89%.  
 
 ## Dependencies
-
+- Preferably [`python 3.6.8`](https://www.python.org/downloads/release/python-368/) or above.
+- pytorch : `pip3 install torch==1.9.1+cu102 torchvision==0.10.1+cu102 torchaudio===0.9.1 -f https://download.pytorch.org/whl/torch_stable.html`
+- numpy : `pip3 install numpy==1.20.3`
+- pandas : `pip3 install pandas==1.2.3`
 
 ## Data
 The dataset will be published soon after some mandetory preprocessing of it.
