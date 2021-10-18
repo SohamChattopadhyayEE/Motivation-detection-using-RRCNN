@@ -15,5 +15,7 @@ In the CodeOcean platform, the test data, trained weights and the complete test 
 The test data and labels can be found [here](https://codeocean.com/capsule/0422935/tree). The entire dataset will be published soon after some mandetory preprocessing of it.
 
 ## Execution
-- #### Test : 
-run `python3 test.py -m RRCNN_C -n 2`
+- ### Test : 
+  - #### Dataset : 
+  - #### Code execution : 
+         run `python3 test.py -m RRCNN_C -n 2`
