@@ -32,6 +32,16 @@ The test data and labels can be found [here](https://codeocean.com/capsule/04229
              |                  ---> reain_label.pkl
              |
              ----> config ----> config.json
+- ### Train : 
+  - #### Code execution : 
+         $python3 train.py -m RRCNN_C -n 2 -lr 0.001
+  - The user can avoid directory ambiguities simply by following the default directory format mentioned above. 
+  - #### Default training parameters:
+      - optimizer : `-opt Adam`
+      - learning rate : `-lr 0.0001`
+      - momentum : `-mm 0.58`
+      - number of training epochs : `-ne 300`
+      - loss : `-lss CrossEntropyLoss`
 - ### Test :                      
   - #### Code execution : 
          $python3 test.py -m RRCNN_C -n 2
