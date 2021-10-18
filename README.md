@@ -42,6 +42,7 @@ The test data and labels can be found [here](https://codeocean.com/capsule/04229
       - momentum : `-mm 0.58`
       - number of training epochs : `-ne 300`
       - loss : `-lss CrossEntropyLoss`
+  - Using these commands we can simply change default values and run training. 
 - ### Test :                      
   - #### Code execution : 
          $python3 test.py -m RRCNN_C -n 2
