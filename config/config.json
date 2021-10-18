@@ -1,0 +1,25 @@
+{
+    "model": [
+        {
+            "RRCNN_A": {
+                "num_channels" : 4,
+                "num_residual_features" : 64,
+                "num_resedual_blocks" : 7
+            }
+        },
+        {
+            "RRCNN_B": {
+                "num_channels" : 4,
+                "num_residual_features" : 64,
+                "num_resedual_blocks" : 7
+            }
+        },
+        {
+            "RRCNN_C": {
+            "num_channels" : 4,
+            "num_residual_features" : 64,
+            "num_resedual_blocks" : 7
+            }
+        }
+    ]
+}
