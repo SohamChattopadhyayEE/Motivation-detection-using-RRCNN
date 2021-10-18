@@ -12,4 +12,4 @@ In the CodeOcean platform, the test data, trained weights and the complete test 
 - pandas : `pip3 install pandas==1.2.3`
 
 ## Data
-The dataset will be published soon after some mandetory preprocessing of it.
+The test data and labels can be found [here](https://codeocean.com/capsule/0422935/tree). The entire dataset will be published soon after some mandetory preprocessing of it.
