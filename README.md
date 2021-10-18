@@ -18,11 +18,12 @@ The test data and labels can be found [here](https://codeocean.com/capsule/04229
                      |
                      |
                      ---->data ----> Test data 
-                     |                  |
-                     |                  |
-                     |                  ---> test_data.pkl
-                     |                  |
-                     |                  ---> test_label.pkl
+                     |      |           |
+                     |      |           |
+                     |      |           ---> test_data.pkl
+                     |      |           |
+                     |      |           ---> test_label.pkl
+                     |      ----> Train data
                      |
                      ----> config ----> config.json
                        
