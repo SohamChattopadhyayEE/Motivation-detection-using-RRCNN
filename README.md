@@ -18,4 +18,4 @@ The test data and labels can be found [here](https://codeocean.com/capsule/04229
 - ### Test : 
   - #### Dataset : 
   - #### Code execution : 
-         python3 test.py -m RRCNN_C -n 2
+         $python3 test.py -m RRCNN_C -n 2
